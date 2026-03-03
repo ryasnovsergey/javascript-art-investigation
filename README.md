@@ -1,1 +1,5 @@
-# javascript-art-investigation
+Explanation of changes.
+For my modified version of the code I wanted the shape to look more intricate and move with a smoother, more organic flow. I focused my changes on the frequency divisors, the base radius and the animation speed.
+I started by lowering the divisors in the cos functions to 6 and 12. Because these numbers are smaller than the original 14 and 30, the cosine waves cycle much more frequently across the grid. This creates a much denser interference pattern, turning the original loose loop into like a "knotted" shape.
+To make it fill the canvas better, I increased the base radius q to 80. One mathematical detail I noticed is that the shape isn't a perfect circle. Because xCoord is modified by the wave variable while yCoord is scaled by d * 9, the horizontal and vertical radii are different. This creates an elliptical, 3D ribbon effect rather than a flat ring.
+Finally, I slowed down the animation by changing the time increment to PI / 40. This makes the ripples created by the sin(d * d - t * 2) function move half as fast as before. I found that this slower speed makes the movement look more "alive" which fits the organic look of the new geometry.
